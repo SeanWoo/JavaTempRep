@@ -1,9 +1,11 @@
+package OOP5;
+
 import java.util.Random;
 
 //Класс для генерации JWT токенов но для упрощения будет просто какой-то набор символов
 public class JwtService {
     public TokensModel GenerateAccessToken(User user){
-        //User тут для генерации claims для токена
+        //OOP5.User тут для генерации claims для токена
 
         var tokenBuilder = new StringBuilder();
         var rnd = new Random();

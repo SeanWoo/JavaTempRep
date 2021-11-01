@@ -1,3 +1,5 @@
+package OOP5;
+
 public class AuthController {
     private UserRepository _userRepository; //тут лучше интерфейс репы
     private JwtService _jwtService; // и тут лучше интерфейс сервиса

@@ -1,3 +1,5 @@
+package OOP5;
+
 import java.util.Objects;
 
 public class User {
