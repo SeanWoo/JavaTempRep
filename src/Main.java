@@ -1,3 +1,6 @@
+import Lambda.ImageFunctionsImpl;
+import Lambda.ImageOperation;
+import Lambda.RgbMaster;
 import OOP1.BabushkaPhone;
 import OOP1.MobileOperator;
 import OOP1.SmartPhone;
@@ -8,9 +11,23 @@ import OOP5.AuthController;
 import OOP5.JwtService;
 import OOP5.UserRepository;
 
+import java.io.IOException;
+
 public class Main {
     public static void main(String argv[]) throws Exception {
-        Execute4Task();
+        ExecuteLambdaTask();
+    }
+
+    public static void ExecuteLambdaTask() throws IOException {
+        var rbgMaster = new RgbMaster("in.png");
+        try {
+            var functions = new ImageFunctionsImpl();
+            rbgMaster.changeImage(rgb -> functions.inversion(rgb));
+        }catch (Exception e){
+
+        }
+
+        rbgMaster.save("out_image.png");
     }
 
     public static void Execute1Task(){
