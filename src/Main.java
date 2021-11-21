@@ -1,3 +1,4 @@
+import GameOfLife.GameOfLife;
 import Lambda.ImageFunctionsImpl;
 import Lambda.ImageOperation;
 import Lambda.RgbMaster;
@@ -15,7 +16,16 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String argv[]) throws Exception {
-        ExecuteLambdaTask();
+        GameOfLifeTask();
+    }
+
+    public static void GameOfLifeTask() {
+        var game = new GameOfLife();
+        try {
+            game.Run();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static void ExecuteLambdaTask() throws IOException {
